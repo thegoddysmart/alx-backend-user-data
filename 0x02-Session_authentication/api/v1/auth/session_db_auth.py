@@ -6,7 +6,9 @@ from models.user_session import UserSession
 
 
 class SessionDBAuth(SessionExpAuth):
-    """ SessionDBAuth class for session management using database """
+    """
+    SessionDBAuth class for session management using database
+    """
 
     def create_session(self, user_id=None):
         """ Creates and stores a session in the database """
@@ -19,7 +21,10 @@ class SessionDBAuth(SessionExpAuth):
         return session_id
 
     def user_id_for_session_id(self, session_id=None):
-        """ Retrieves the user ID by searching for the session ID in the database """
+        """
+        Retrieves the user ID by searching for the
+        session ID in the database
+        """
         if not session_id:
             return None
 
@@ -32,7 +37,9 @@ class SessionDBAuth(SessionExpAuth):
         return user_session.user_id
 
     def destroy_session(self, request=None):
-        """ Destroys the session by removing it from the database """
+        """
+        Destroys the session by removing it from the database
+        """
         if not request:
             return False
 
