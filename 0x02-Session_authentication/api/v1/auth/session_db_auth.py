@@ -53,5 +53,5 @@ class SessionDBAuth(SessionExpAuth):
             return False
 
         user_session = user_sessions[0]
-        user_session.remove()  # Remove the session from the database (file-based)
+        user_session.remove()
         return True
