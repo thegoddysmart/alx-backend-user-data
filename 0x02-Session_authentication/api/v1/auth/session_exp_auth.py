@@ -9,7 +9,7 @@ from os import getenv
 
 class SessionExpAuth(SessionAuth):
     """ SessionExpAuth class with session expiration """
-    
+
     def __init__(self):
         """ Initialize SessionExpAuth with session duration """
         super().__init__()
@@ -37,7 +37,7 @@ class SessionExpAuth(SessionAuth):
         session_dict = self.user_id_by_session_id.get(session_id)
         if session_dict is None or 'created_at' not in session_dict:
             return None
-        
+
         if self.session_duration <= 0:
             return session_dict.get('user_id')
 
